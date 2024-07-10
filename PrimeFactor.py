@@ -1,4 +1,13 @@
-class PrimeFactor():
+from abc import ABCMeta, abstractmethod
+
+
+class I_PrimeFactor(metaclass=ABCMeta):
+    @abstractmethod
+    def run(self, param):
+        pass
+
+
+class PrimeFactor(I_PrimeFactor):
     def __init__(self):
         self.rst = []
 
